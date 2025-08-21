@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZetRocks - Free Online Tools | Fast, Simple, No Login Required</title>
+    <meta name="description" content="Access powerful tools for files, images, text, and more — all free, secure, and without any sign-up. Monetized with ads to stay free forever.">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#" class="logo" aria-label="ZetRocks Home">
+                    <img src="assets/logo.png" alt="ZetRocks" class="brand-logo">
+                    <span class="sr-only">ZetRocks</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Tools <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="./tools/index.html#file-tools" class="dropdown-item">
+                                <i class="fas fa-file"></i> File Tools
+                            </a>
+                            <a href="./tools/index.html#image-tools" class="dropdown-item">
+                                <i class="fas fa-image"></i> Image Tools
+                            </a>
+                            <a href="./tools/index.html#text-tools" class="dropdown-item">
+                                <i class="fas fa-font"></i> Text Tools
+                            </a>
+                            <a href="./tools/index.html#developer-tools" class="dropdown-item">
+                                <i class="fas fa-code"></i> Developer Tools
+                            </a>
+                            <a href="./tools/index.html#utility-tools" class="dropdown-item">
+                                <i class="fas fa-calculator"></i> Utility Tools
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./blog/index.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./legal/about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Free Online Tools Hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <div class="hero-left">
+                        <h1 class="hero-title">Free Online Tools for Everyday Tasks</h1>
+                        <p class="hero-subtitle">Fast, secure, and easy-to-use web tools for files, images, text, and more — no login required.</p>
+                        <div class="hero-buttons">
+                            <a href="#categories" class="btn btn-primary" aria-label="Explore all tool categories">Explore Tools</a>
+                            <a href="#popular" class="btn btn-secondary" aria-label="Start using popular tools now">Use Now</a>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <img src="assets/icon.png" alt="Illustration placeholder for online tools" class="hero-image" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Tool Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>File Tools</h3>
+                    <p>Compress, Convert, and Manage PDFs</p>
+                    <a href="./tools/index.html#file-tools" class="category-link">Explore Tools</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Image Tools</h3>
+                    <p>Compress, Crop, and Download Media</p>
+                    <a href="./tools/index.html#image-tools" class="category-link">Explore Tools</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-font"></i>
+                    </div>
+                    <h3>Text Tools</h3>
+                    <p>Count, Convert, and Format Text</p>
+                    <a href="./tools/index.html#text-tools" class="category-link">Explore Tools</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Developer Tools</h3>
+                    <p>Validate, Encode, and Generate Code</p>
+                    <a href="./tools/index.html#developer-tools" class="category-link">Explore Tools</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Utility Tools</h3>
+                    <p>Calculate, Convert Units, and More</p>
+                    <a href="./tools/index.html#utility-tools" class="category-link">Explore Tools</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Tools Section -->
+    <section class="popular-tools" id="popular">
+        <div class="container">
+            <h2 class="section-title">Popular Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>PDF Compressor</h3>
+                    <p>Reduce PDF file size while maintaining quality</p>
+                    <a href="./tools/file-tools/pdf-compressor.html" class="btn btn-tool">Use Now</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube Thumbnail Downloader</h3>
+                    <p>Download high-quality YouTube thumbnails instantly</p>
+                    <a href="./tools/image-tools/youtube-thumbnail-downloader.html" class="btn btn-tool">Use Now</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-compress-alt"></i>
+                    </div>
+                    <h3>Image Compressor</h3>
+                    <p>Compress images without losing visual quality</p>
+                    <a href="./tools/image-tools/image-compressor.html" class="btn btn-tool">Use Now</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-sort-numeric-up"></i>
+                    </div>
+                    <h3>Word Counter</h3>
+                    <p>Count words, characters, and paragraphs</p>
+                    <a href="./tools/text-tools/word-counter.html" class="btn btn-tool">Use Now</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>JSON Formatter</h3>
+                    <p>Format and validate JSON data easily</p>
+                    <a href="./tools/developer-tools/json-formatter.html" class="btn btn-tool">Use Now</a>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <h3>BMI Calculator</h3>
+                    <p>Calculate your Body Mass Index quickly</p>
+                    <a href="./tools/utility-tools/bmi-calculator.html" class="btn btn-tool">Use Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose ZetRocks?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-slash"></i>
+                    </div>
+                    <h3>No Login Required</h3>
+                    <p>Just open a tool and start using. No registration, no hassle, no personal data collection.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast & Free Forever</h3>
+                    <p>Optimized tools that work instantly. Supported by ads to keep everything completely free.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>All-in-One Hub</h3>
+                    <p>From documents to images, everything you need in one convenient location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <h2 class="section-title">Latest Guides & Tips</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="blog-content">
+                        <h3>How to Compress PDF Online</h3>
+                        <p>Learn the best techniques to reduce PDF file sizes without compromising quality.</p>
+                        <a href="./blog/file-tools/how-to-compress-pdf-online.html" class="blog-link">Read More</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Best Free Tools for Students</h3>
+                        <p>Discover essential online tools that can help students with their academic work.</p>
+                        <a href="./blog/productivity/best-free-tools-for-students.html" class="blog-link">Read More</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Image Optimization Guide</h3>
+                        <p>Master the art of optimizing images for web without losing visual appeal.</p>
+                        <a href="./blog/image-tools/image-optimization-guide.html" class="blog-link">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Accordion) -->
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <p class="faq-subtitle">Quick answers to common questions about ZetRocks tools, privacy, and compatibility.</p>
+            <div class="faq-list faq-accordion" data-accordion="single">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is ZetRocks free to use?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            Yes. All tools are completely free. We use lightweight ads on tool pages to keep the platform free forever.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do I need to create an account?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            No sign-up is required. Just open a tool and start using it instantly—no personal data needed.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Are my files and data secure?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            Yes. Most tools work directly in your browser (client-side), meaning your data stays on your device.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Which devices and browsers are supported?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            ZetRocks works on modern browsers across desktop and mobile. We optimize for speed and compatibility.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Where can I find all available tools?</span>
+                        <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer">
+                            Visit the full tools directory to browse by category, or use the popular tools section above to get started quickly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" aria-label="Get started CTA">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="cta-title">Ready to get started?</h2>
+                <p class="cta-subtitle">Explore our all-in-one toolkit for files, images, text, and developer workflows — fast, secure, and free.</p>
+                <div class="cta-actions">
+                    <a href="./tools/index.html" class="btn btn-primary">Explore All Tools</a>
+                    <a href="#popular" class="btn btn-secondary">Try Popular Tools</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-tools"></i>
+                        ZetRocks
+                    </div>
+                    <p>Free online tools for everyone. Fast, secure, and always free.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="./legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="./legal/terms.html">Terms of Service</a></li>
+                        <li><a href="./legal/about.html">About</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ZetRocks – All rights reserved.</p>
+                <p class="disclaimer">All tools are free and work client-side. Ads help keep the platform free.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

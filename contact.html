@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | ZetRocks</title>
+    <meta name="description" content="Contact ZetRocks for feedback, suggestions, or support regarding our free online tools." />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo" aria-label="ZetRocks Home">
+                    <img src="assets/logo.png" alt="ZetRocks" class="brand-logo">
+                    <span class="sr-only">ZetRocks</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="tools/index.html" class="nav-link">Tools</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page container">
+        <h1 class="section-title">Contact Us</h1>
+        <p>Have a question, found a bug, or want to suggest a new tool? We'd love to hear from you.</p>
+
+        <div class="contact-grid">
+            <form id="contact-form" class="card">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="How can we help?" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <p id="contact-status"></p>
+            </form>
+
+            <div class="card">
+                <h2>Other ways to reach us</h2>
+                <ul>
+                    <li>Email: <a href="mailto:hello@zetrocks.com">hello@zetrocks.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ZetRocks – All rights reserved.</p>
+                <p class="disclaimer">All tools are free and work client-side. Ads help keep the platform free.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Basic client-side only form handler (no backend). Replace with your own endpoint if needed.
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+        e.preventDefault();
+        const status = document.getElementById('contact-status');
+        status.textContent = 'Thanks! Your message has been recorded locally. Please configure a backend endpoint to receive emails.';
+        status.style.color = 'var(--success, #0a7d39)';
+        this.reset();
+    });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

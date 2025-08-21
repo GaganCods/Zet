@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | ZetRocks</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Find tools and guides on ZetRocks.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html" class="logo" aria-label="ZetRocks Home">
+          <img src="assets/logo.png" alt="ZetRocks" class="brand-logo">
+          <span class="sr-only">ZetRocks</span>
+        </a>
+      </div>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="tools/index.html" class="nav-link">All Tools</a></li>
+          <li class="nav-item"><a href="blog/index.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <div class="search-container">
+          <button class="search-toggle" id="search-toggle" title="Open search"><i class="fas fa-search"></i></button>
+          <div class="search-box" id="search-box">
+            <input type="text" placeholder="Search tools..." class="search-input">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 404 Hero -->
+  <section class="hero error-hero">
+    <div class="container">
+      <div class="hero-content error-hero-content">
+        <div class="error-code">404</div>
+        <h1 class="hero-title">Page not found</h1>
+        <p class="error-desc">Sorry, we couldn't find that page. Try searching or go back to the homepage.</p>
+
+        <div class="hero-search error-search">
+          <div class="search-bar">
+            <input type="text" placeholder="Search for any tool..." class="hero-search-input">
+            <button class="hero-search-btn"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+
+        <div class="hero-buttons error-actions">
+          <a href="index.html" class="btn btn-primary"><i class="fas fa-home"></i>&nbsp;Go to Homepage</a>
+          <a href="tools/index.html" class="btn btn-secondary"><i class="fas fa-toolbox"></i>&nbsp;Browse All Tools</a>
+          <a href="blog/index.html" class="btn btn-secondary"><i class="fas fa-blog"></i>&nbsp;Visit Blog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo"><i class="fas fa-tools"></i> ZetRocks</div>
+          <p class="disclaimer">Free, fast tools for files, images, text, and more. No login required.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tools/index.html">All Tools</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Popular</h4>
+          <ul>
+            <li><a href="tools/file-tools/pdf-compressor.html">PDF Compressor</a></li>
+            <li><a href="tools/image-tools/image-compressor.html">Image Compressor</a></li>
+            <li><a href="tools/developer-tools/json-formatter.html">JSON Formatter</a></li>
+            <li><a href="tools/utility-tools/bmi-calculator.html">BMI Calculator</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> ZetRocks. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set year without loading full script bundle if not cached yet
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
