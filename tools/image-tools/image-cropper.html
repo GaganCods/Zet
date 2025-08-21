@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Cropper – Crop Images Online | ZetRocks</title>
+  <meta name="description" content="Crop images online with custom aspect ratios and a live preview. Free, fast, and secure in your browser.">
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../faq.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="../../assets/icon.png" type="image/png">
+  <style>
+    .crop-stage{position:relative;max-width:100%;overflow:hidden;border:1px dashed var(--border-color);border-radius:10px;background:var(--card-bg)}
+    .crop-rect{position:absolute;border:2px solid #60a5fa;background:rgba(96,165,250,.15);cursor:move}
+    .crop-h{position:absolute;width:10px;height:10px;background:#60a5fa;border-radius:2px}
+    .crop-h.br{right:-5px;bottom:-5px;cursor:nwse-resize}
+  </style>
+</head>
+<body class="tool-page accent-image">
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a class="logo" href="../../index.html" aria-label="ZetRocks Home"><img src="../../assets/logo.png" alt="ZetRocks" class="brand-logo"></a></div>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top:20px">
+    <div class="ad-banner" style="margin-top:10px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+
+    <section class="container" style="margin-top:20px">
+      <h1 class="section-title" style="margin-bottom:1rem">Crop Images Online</h1>
+      <p style="text-align:center;color:var(--text-secondary);max-width:800px;margin:0 auto 1.5rem">Upload an image, select the area, set an aspect ratio, and download the cropped result.</p>
+
+      <div class="tool-3col">
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+
+        <div class="tool-card">
+          <label class="file-drop full-width-on-mobile">
+            <input id="c-input" type="file" accept="image/*" />
+            <div><strong>Click to upload</strong> or drag & drop an image</div>
+            <div class="hint">JPG, PNG, WEBP</div>
+          </label>
+
+          <div class="crop-stage" id="c-stage" style="margin-top:1rem">
+            <img id="c-img" alt="preview" style="max-width:100%;display:none"/>
+            <div id="c-rect" class="crop-rect" style="display:none"><div class="crop-h br"></div></div>
+          </div>
+
+          <div class="tool-actions" style="gap:.75rem;flex-wrap:wrap">
+            <label>Aspect:
+              <select id="c-aspect">
+                <option value="free">Free</option>
+                <option value="1/1">1:1</option>
+                <option value="16/9">16:9</option>
+                <option value="4/3">4:3</option>
+              </select>
+            </label>
+            <button class="btn btn-tool btn-cta" id="c-crop">Crop</button>
+          </div>
+
+          <div id="c-result" style="display:none;margin-top:1rem">
+            <img id="c-out" alt="Cropped preview" style="max-width:100%;border:1px solid var(--border-color);border-radius:8px"/>
+            <div style="margin-top:.5rem">
+              <a id="c-download" class="btn btn-secondary" href="#" download="cropped.png">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+      </div>
+
+      <section class="how-to" style="margin-top:2rem">
+        <h3>How to Use</h3>
+        <ol style="margin-left:1.25rem;color:var(--text-secondary)">
+          <li>Upload an image.</li>
+          <li>Drag to select an area. Resize using the corner handle.</li>
+          <li>Choose an aspect ratio or keep Free, then click Crop & Download.</li>
+        </ol>
+      </section>
+
+      <section class="seo-block">
+        <div class="seo-card">
+          <h3>Online Image Cropper</h3>
+          <div class="seo-text">
+            <p>Crop photos for avatars, banners, and posts with precise aspect ratios and instant preview. Everything runs locally in your browser.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <div class="ad-banner" style="margin-top:30px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo"><i class="fas fa-tools"></i> ZetRocks</div>
+          <p>Free online tools for everyone. Fast, secure, and always free.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../index.html">All Tools</a></li>
+            <li><a href="../../index.html#blog">Blog</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../../legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../../legal/terms.html">Terms of Service</a></li>
+            <li><a href="../../legal/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ZetRocks – All rights reserved.</p>
+        <p class="disclaimer">All tools are free and work client-side. Ads help keep the platform free.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script>
+    (function(){
+      const file = document.getElementById('c-input');
+      const img = document.getElementById('c-img');
+      const stage = document.getElementById('c-stage');
+      const rect = document.getElementById('c-rect');
+      const handle = rect.querySelector('.crop-h.br');
+      const aspectSel = document.getElementById('c-aspect');
+      const cropBtn = document.getElementById('c-crop');
+      const resultWrap = document.getElementById('c-result');
+      const outImg = document.getElementById('c-out');
+      const dlBtn = document.getElementById('c-download');
+
+      let imgW=0, imgH=0; // displayed sizes
+      let startX=0, startY=0; let dragging=false; let resizing=false;
+
+      file.addEventListener('change', ()=>{
+        const f = file.files && file.files[0]; if(!f) return;
+        const url = URL.createObjectURL(f);
+        img.onload = ()=>{
+          img.style.display = 'block';
+          // Reset rect and hide previous result
+          rect.style.display='none';
+          resultWrap.style.display = 'none';
+          URL.revokeObjectURL(url);
+          // Wait next frame to get actual sizes
+          requestAnimationFrame(()=>{
+            const r = img.getBoundingClientRect();
+            imgW = r.width; imgH = r.height;
+          });
+        };
+        img.src = url;
+      });
+
+      stage.addEventListener('mousedown', (e)=>{
+        if(e.target===handle){ resizing=true; return; }
+        if(e.target!==img && e.target!==rect) return;
+        dragging=true; const pos = stage.getBoundingClientRect();
+        const x = e.clientX - pos.left; const y = e.clientY - pos.top;
+        startX = x; startY = y;
+        rect.style.left = x + 'px'; rect.style.top = y + 'px';
+        rect.style.width = '0px'; rect.style.height = '0px';
+        rect.style.display = 'block';
+      });
+      window.addEventListener('mousemove', (e)=>{
+        if(!dragging && !resizing) return;
+        const pos = stage.getBoundingClientRect();
+        let x = e.clientX - pos.left; let y = e.clientY - pos.top;
+        x = Math.max(0, Math.min(x, pos.width));
+        y = Math.max(0, Math.min(y, pos.height));
+        if(resizing){
+          let w = x - parseFloat(rect.style.left);
+          let h = y - parseFloat(rect.style.top);
+          ;[w, h] = applyAspect(w, h);
+          rect.style.width = Math.max(10, w) + 'px';
+          rect.style.height = Math.max(10, h) + 'px';
+          return;
+        }
+        let w = x - startX; let h = y - startY;
+        if(w<0){ rect.style.left = x+'px'; w = startX - x; }
+        if(h<0){ rect.style.top = y+'px'; h = startY - y; }
+        ;[w, h] = applyAspect(w, h);
+        rect.style.width = Math.max(10, w) + 'px';
+        rect.style.height = Math.max(10, h) + 'px';
+      });
+      window.addEventListener('mouseup', ()=>{ dragging=false; resizing=false; });
+
+      function parseRatio(val){
+        if(val==='free') return null;
+        const parts = val.split('/');
+        if(parts.length!==2) return null;
+        const a = Number(parts[0]);
+        const b = Number(parts[1]);
+        if(!isFinite(a) || !isFinite(b) || b===0) return null;
+        return a/b;
+      }
+
+      function applyAspect(w, h){
+        const r = parseRatio(aspectSel.value);
+        if(!r) return [w, h];
+        if(w <= 0) w = 1;
+        if(h <= 0) h = 1;
+        if(w < h * r){
+          w = h * r;
+        } else {
+          h = w / r;
+        }
+        return [w, h];
+      }
+
+      cropBtn.addEventListener('click', ()=>{
+        if(rect.style.display==='none'){ alert('Select an area first.'); return; }
+        const rx = parseFloat(rect.style.left);
+        const ry = parseFloat(rect.style.top);
+        const rw = parseFloat(rect.style.width);
+        const rh = parseFloat(rect.style.height);
+        if(rw<10 || rh<10) { alert('Selection too small.'); return; }
+        // Map selection to original image pixels
+        const scaleX = img.naturalWidth / img.getBoundingClientRect().width;
+        const scaleY = img.naturalHeight / img.getBoundingClientRect().height;
+        const sx = Math.round(rx*scaleX);
+        const sy = Math.round(ry*scaleY);
+        const sw = Math.round(rw*scaleX);
+        const sh = Math.round(rh*scaleY);
+        const canvas = document.createElement('canvas');
+        canvas.width = sw; canvas.height = sh;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, sx, sy, sw, sh, 0, 0, sw, sh);
+        const url = canvas.toDataURL('image/png');
+        outImg.src = url;
+        dlBtn.href = url;
+        resultWrap.style.display = 'block';
+      });
+    })();
+  </script>
+</body>
+</html>

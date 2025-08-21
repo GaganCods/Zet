@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Optimization Guide: Speed Without Sacrificing Quality | ZetRocks Blog</title>
+  <meta name="description" content="Master the art of optimizing images for the web without losing visual appeal. Learn formats, compression, resizing, and delivery best practices with practical tips and tools." />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../blog.css" />
+  <link rel="stylesheet" href="../../faq.css" />
+  <link rel="icon" href="../../assets/icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a class="logo" href="../../index.html" aria-label="ZetRocks Home"><img src="../../assets/logo.png" class="brand-logo" alt="ZetRocks"></a></div>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Tools <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="../../tools/index.html#file-tools" class="dropdown-item"><i class="fas fa-file"></i> File Tools</a>
+              <a href="../../tools/index.html#image-tools" class="dropdown-item"><i class="fas fa-image"></i> Image Tools</a>
+              <a href="../../tools/index.html#text-tools" class="dropdown-item"><i class="fas fa-font"></i> Text Tools</a>
+              <a href="../../tools/index.html#developer-tools" class="dropdown-item"><i class="fas fa-code"></i> Developer Tools</a>
+              <a href="../../tools/index.html#utility-tools" class="dropdown-item"><i class="fas fa-calculator"></i> Utility Tools</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="../index.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="../../legal/about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="../../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top:90px">
+    <div class="blog-layout">
+      <div class="blog-main">
+        <article class="article">
+          <header>
+            <h1 class="title">Image Optimization Guide: Master Speed Without Losing Visual Appeal</h1>
+            <div class="byline">
+              <img src="../../assets/icon.png" alt="Author avatar" class="author-avatar" />
+              <span>By ZetRocks Team</span>
+              <span>•</span>
+              <time datetime="2025-08-21">Aug 21, 2025</time>
+              <span>•</span>
+              <span>7 min read</span>
+            </div>
+            <p class="lede" style="color:var(--text-secondary);margin-top:.5rem">Faster pages, happier users, and better SEO. Learn how to pick the right format, compress smartly, resize responsibly, and deliver images efficiently.</p>
+            <div class="share-bar" aria-label="Share this article">
+              <button class="share-btn" data-share="facebook" aria-label="Share on Facebook"><i class="fab fa-facebook"></i> Facebook</button>
+              <button class="share-btn" data-share="whatsapp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+              <button class="share-btn" data-share="copy" aria-label="Copy link"><i class="fas fa-link"></i> Copy link</button>
+              <span class="copy-tip" role="status" aria-live="polite">Link copied!</span>
+            </div>
+          </header>
+
+          <div class="content">
+            <h2>Why image optimization matters</h2>
+            <p>Images often account for the largest share of page weight. Optimizing them improves perceived performance, Core Web Vitals (LCP/CLS), and conversion. The goal is to reduce bytes without harming perceived quality.</p>
+
+            <h2>Choose the right format</h2>
+            <ul>
+              <li><strong>JPG</strong>: Photographs and complex gradients. Adjustable quality, small file sizes.</li>
+              <li><strong>PNG</strong>: Graphics with sharp edges, transparency, or text.</li>
+              <li><strong>WebP</strong>: Modern lossy/lossless, better compression than JPG/PNG in most cases.</li>
+              <li><strong>AVIF</strong>: Next‑gen with excellent compression; still maturing in tooling and support.</li>
+            </ul>
+
+            <h2>Compress smartly</h2>
+            <p>Start from a high‑quality source. Lower quality gradually until differences are barely noticeable. Avoid double compression. For PNGs, use lossless compression with palette reduction when possible.</p>
+
+            <h2>Resize to display size</h2>
+            <p>Do not ship 4000px images for a 1200px layout. Export multiple sizes and use responsive techniques.</p>
+            <pre><code>&lt;img srcset="image-800.jpg 800w, image-1200.jpg 1200w, image-1600.jpg 1600w"
+     sizes="(max-width: 768px) 100vw, 1200px"
+     src="image-1200.jpg" alt="..."&gt;</code></pre>
+
+            <h2>Delivery best practices</h2>
+            <ul>
+              <li>Lazy‑load offscreen images: <code>loading="lazy"</code>.</li>
+              <li>Set explicit width/height to avoid layout shifts.</li>
+              <li>Use <code>&lt;picture&gt;</code> for modern formats with fallbacks.</li>
+              <li>Cache and use a CDN when possible.</li>
+            </ul>
+
+            <h2>Try it now</h2>
+            <p>Optimize images in your browser using our tools:
+              <a href="../../tools/image-tools/image-compressor.html">Image Compressor</a>,
+              <a href="../../tools/image-tools/image-converter.html">Image Converter</a>, and
+              <a href="../../tools/image-tools/image-cropper.html">Image Cropper</a>.
+            </p>
+
+            <h2>FAQs</h2>
+            <section class="faq-section" aria-labelledby="faq-title">
+              <h3 id="faq-title" class="sr-only">Frequently Asked Questions</h3>
+              <div class="faq-container">
+                <div class="faq-list faq-accordion" data-accordion="single">
+                  <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                      <span>What quality should I use for JPG?</span>
+                      <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer-wrapper"><div class="faq-answer">
+                      <p>Start around 70–80 and adjust by eye. Aim for minimal visible artifacts with solid savings.</p>
+                    </div></div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                      <span>Is WebP always better than JPG?</span>
+                      <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer-wrapper"><div class="faq-answer">
+                      <p>Usually smaller at similar quality, but compare results. Some photos still look better as tuned JPGs.</p>
+                    </div></div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                      <span>Do I need AVIF?</span>
+                      <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer-wrapper"><div class="faq-answer">
+                      <p>It delivers excellent compression. Use <code>&lt;picture&gt;</code> to serve AVIF with WebP/JPG fallbacks.</p>
+                    </div></div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                      <span>Should I upscale small images?</span>
+                      <span class="faq-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="faq-answer-wrapper"><div class="faq-answer">
+                      <p>No. Upscaling adds blur without new detail. Design around the native resolution instead.</p>
+                    </div></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <h2>Related tools</h2>
+            <div class="tool-cards-grid">
+              <div class="tool-mini-card">
+                <div class="tool-mini-icon"><i class="fas fa-compress"></i></div>
+                <div class="tool-mini-title">Image Compressor</div>
+                <div class="tool-mini-text">Reduce file size while keeping visual quality high.</div>
+                <a class="btn btn-use" href="../../tools/image-tools/image-compressor.html">Use Now</a>
+              </div>
+              <div class="tool-mini-card">
+                <div class="tool-mini-icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="tool-mini-title">Image Converter</div>
+                <div class="tool-mini-text">Convert JPG, PNG, and WebP for the best balance of size and quality.</div>
+                <a class="btn btn-use" href="../../tools/image-tools/image-converter.html">Use Now</a>
+              </div>
+              <div class="tool-mini-card">
+                <div class="tool-mini-icon"><i class="fas fa-crop"></i></div>
+                <div class="tool-mini-title">Image Cropper</div>
+                <div class="tool-mini-text">Crop to exact dimensions to avoid shipping oversized images.</div>
+                <a class="btn btn-use" href="../../tools/image-tools/image-cropper.html">Use Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="share-bar" aria-label="Share this article">
+            <button class="share-btn" data-share="facebook" aria-label="Share on Facebook"><i class="fab fa-facebook"></i> Facebook</button>
+            <button class="share-btn" data-share="whatsapp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+            <button class="share-btn" data-share="copy" aria-label="Copy link"><i class="fas fa-link"></i> Copy link</button>
+            <span class="copy-tip" role="status" aria-live="polite">Link copied!</span>
+          </div>
+        </article>
+      </div>
+
+      <aside class="blog-sidebar" id="blog-sidebar">
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-expanded="true" aria-controls="blog-sidebar">Toggle Sidebar</button>
+        <div class="widget">
+          <h4>Advertisement</h4>
+          <script type="text/javascript">
+            atOptions = {
+              'key' : '3e4ab479ed5ae413a08596fab86464e3',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+            };
+          </script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/3e4ab479ed5ae413a08596fab86464e3/invoke.js"></script>
+        </div>
+        <div class="widget">
+          <h4>Categories</h4>
+          <ul class="categories-list">
+            <li><a href="../file-tools/index.html">File Tools</a></li>
+            <li><a href="../image-tools/index.html">Image Tools</a></li>
+            <li><a href="../text-tools/index.html">Text Tools</a></li>
+            <li><a href="../developer-tools/index.html">Developer Tools</a></li>
+            <li><a href="../index.html">All Posts</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h4>Support Us</h4>
+          <div class="support">
+            <a class="support-btn" href="#" rel="nofollow"><i class="fas fa-mug-saucer"></i> Buy us a coffee</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo"><i class="fas fa-tools"></i> ZetRocks</div>
+          <p>Free online tools for everyone. Fast, secure, and always free.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#categories">Categories</a></li>
+            <li><a href="../index.html">Blog</a></li>
+            <li><a href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../../legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../../legal/terms.html">Terms of Service</a></li>
+            <li><a href="../../legal/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ZetRocks – All rights reserved.</p>
+        <p class="disclaimer">All tools are free and work client-side. Ads help keep the platform free.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+</body>
+</html>

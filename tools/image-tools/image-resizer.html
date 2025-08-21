@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Resizer – Resize Images Online | ZetRocks</title>
+  <meta name="description" content="Resize images online. Set width and height, keep aspect ratio, preview, and download. Free and private in your browser.">
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../faq.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="../../assets/icon.png" type="image/png">
+</head>
+<body class="tool-page accent-image">
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a class="logo" href="../../index.html" aria-label="ZetRocks Home"><img src="../../assets/logo.png" alt="ZetRocks" class="brand-logo"></a></div>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top:20px">
+    <div class="ad-banner" style="margin-top:10px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+
+    <section class="container" style="margin-top:20px">
+      <h1 class="section-title" style="margin-bottom:1rem">Resize Images Online</h1>
+      <p style="text-align:center;color:var(--text-secondary);max-width:800px;margin:0 auto 1.5rem">Set exact dimensions, keep aspect ratio, and download a resized copy—right in your browser.</p>
+
+      <div class="tool-3col">
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+
+        <div class="tool-card">
+          <label class="file-drop full-width-on-mobile">
+            <input id="r-input" type="file" accept="image/*" />
+            <div><strong>Click to upload</strong> or drag & drop an image</div>
+            <div class="hint">JPG, PNG, WEBP</div>
+          </label>
+
+          <div class="tool-actions" style="gap:.75rem;flex-wrap:wrap">
+            <label>Width: <input id="r-w" type="number" min="1" style="width:110px" /></label>
+            <label>Height: <input id="r-h" type="number" min="1" style="width:110px" /></label>
+            <label style="display:flex;align-items:center;gap:.5rem"><input id="r-lock" type="checkbox" checked /> Keep ratio</label>
+            <button class="btn btn-tool btn-cta" id="r-apply">Resize</button>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1rem">
+            <canvas id="r-canvas" style="max-width:100%;background:var(--card-bg);border:1px dashed var(--border-color);border-radius:10px"></canvas>
+            <a id="r-download" class="btn btn-secondary" href="#" download="resized.jpg" style="display:none;max-width:160px">Download</a>
+          </div>
+        </div>
+
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+      </div>
+
+      <section class="how-to" style="margin-top:2rem">
+        <h3>How to Use</h3>
+        <ol style="margin-left:1.25rem;color:var(--text-secondary)">
+          <li>Upload an image.</li>
+          <li>Enter width or height (lock to keep aspect ratio).</li>
+          <li>Click Resize and download the result.</li>
+        </ol>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="faq-container">
+          <h2 id="faq-title" class="faq-title">FAQ</h2>
+          <div class="faq-list faq-accordion" data-accordion="single">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Does it work offline?</button>
+              <div class="faq-answer-wrapper"><div class="faq-answer">Processing happens in your browser for privacy.</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seo-block">
+        <div class="seo-card">
+          <h3>Resize Images Online</h3>
+          <div class="seo-text">
+            <p>Quickly resize images for web, email, or social media. Keep aspect ratio and preview results instantly.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <div class="ad-banner" style="margin-top:30px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo"><i class="fas fa-tools"></i> ZetRocks</div>
+          <p>Free online tools for everyone. Fast, secure, and always free.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../index.html">All Tools</a></li>
+            <li><a href="../../index.html#blog">Blog</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../../legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../../legal/terms.html">Terms of Service</a></li>
+            <li><a href="../../legal/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ZetRocks – All rights reserved.</p>
+        <p class="disclaimer">All tools are free and work client-side. Ads help keep the platform free.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script>
+    (function(){
+      const input = document.getElementById('r-input');
+      const wEl = document.getElementById('r-w');
+      const hEl = document.getElementById('r-h');
+      const lockEl = document.getElementById('r-lock');
+      const btn = document.getElementById('r-apply');
+      const canvas = document.getElementById('r-canvas');
+      const ctx = canvas.getContext('2d');
+      const dl = document.getElementById('r-download');
+      let img = new Image();
+      let ratio = 1;
+
+      input.addEventListener('change', ()=>{
+        const file = input.files && input.files[0];
+        if(!file) return;
+        const url = URL.createObjectURL(file);
+        img = new Image();
+        img.onload = ()=>{
+          ratio = img.naturalWidth / img.naturalHeight;
+          wEl.value = img.naturalWidth;
+          hEl.value = img.naturalHeight;
+          draw(img.naturalWidth, img.naturalHeight);
+          URL.revokeObjectURL(url);
+        };
+        img.src = url;
+      });
+
+      wEl.addEventListener('input', ()=>{
+        if(lockEl.checked && ratio && wEl.value){ hEl.value = Math.round(wEl.value/ratio); }
+      });
+      hEl.addEventListener('input', ()=>{
+        if(lockEl.checked && ratio && hEl.value){ wEl.value = Math.round(hEl.value*ratio); }
+      });
+
+      function draw(w,h){
+        if(!img.src) return;
+        canvas.width = Math.max(1, Number(w)||1);
+        canvas.height = Math.max(1, Number(h)||1);
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        dl.style.display = 'none';
+      }
+
+      btn.addEventListener('click', ()=>{
+        if(!img.src) { alert('Upload an image first.'); return; }
+        draw(Number(wEl.value), Number(hEl.value));
+        const url = canvas.toDataURL('image/jpeg', 0.92);
+        dl.href = url;
+        dl.download = 'resized.jpg';
+        dl.style.display = 'inline-flex';
+      });
+    })();
+  </script>
+</body>
+</html>

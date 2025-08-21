@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Picker – HEX, RGB, HSL Converter | ZetRocks</title>
+  <meta name="description" content="Pick a color and convert between HEX, RGB, and HSL formats. Copy values in one click.">
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../faq.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="../../assets/icon.png" type="image/png">
+</head>
+<body class="tool-page accent-dev">
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a class="logo" href="../../index.html" aria-label="ZetRocks Home"><img src="../../assets/logo.png" alt="ZetRocks" class="brand-logo"></a></div>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top:20px">
+    <div class="ad-banner" style="margin-top:10px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+
+    <section class="container" style="margin-top:20px">
+      <h1 class="section-title" style="margin-bottom:1rem">Color Picker</h1>
+      <p style="text-align:center;color:var(--text-secondary);max-width:800px;margin:0 auto 1.5rem">Pick a color and copy HEX, RGB, and HSL values.</p>
+
+      <div class="tool-3col">
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+
+        <div class="tool-card">
+          <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+            <input type="color" id="picker" value="#4f46e5" style="width:60px;height:40px;border:none;background:none;padding:0">
+            <input type="text" id="hex" value="#4f46e5" class="input" style="min-width:180px" />
+            <button class="btn" data-copy="#hex">Copy HEX</button>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem;margin-top:1rem">
+            <div class="card mini"><div class="label">RGB</div><div id="rgb">79, 70, 229</div><button class="btn tiny" data-copy="#rgb">Copy</button></div>
+            <div class="card mini"><div class="label">HSL</div><div id="hsl">248, 77%, 59%</div><button class="btn tiny" data-copy="#hsl">Copy</button></div>
+          </div>
+
+          <div style="margin-top:1rem;border-top:1px dashed var(--border-color);padding-top:1rem">
+            <label class="sr-only" for="any">Any Color</label>
+            <input id="any" class="input" placeholder="#000000, rgb(0,0,0) or hsl(0,0%,0%)" />
+            <button class="btn" id="apply">Apply</button>
+          </div>
+
+          <div id="preview" style="margin-top:1rem;height:100px;border-radius:8px;background:#4f46e5"></div>
+        </div>
+
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+      </div>
+
+      <section class="how-to" style="margin-top:2rem">
+        <h3>How to Use</h3>
+        <ol style="margin-left:1.25rem;color:var(--text-secondary)">
+          <li>Pick a color or paste a HEX/RGB/HSL value.</li>
+          <li>Copy any format with one click.</li>
+          <li>Preview updates in real time.</li>
+        </ol>
+      </section>
+
+      <section class="features" style="margin-top:2rem">
+        <h2>Key Features</h2>
+        <div class="feature-cards">
+          <div class="feature-card"><div class="feature-icon">🎯</div><h3>Accurate</h3><p>Precise conversions across HEX, RGB, and HSL.</p></div>
+          <div class="feature-card"><div class="feature-icon">📋</div><h3>Copy Fast</h3><p>One‑click copy for each format.</p></div>
+          <div class="feature-card"><div class="feature-icon">⚡</div><h3>Client‑Side</h3><p>No data leaves your device.</p></div>
+        </div>
+      </section>
+
+      <section class="seo-block">
+        <div class="seo-card">
+          <h3>Convert Colors Between HEX, RGB, and HSL</h3>
+          <div class="seo-text"><p>Use the built‑in color picker or paste any color value to convert between formats instantly. Ideal for designers and developers working on branding, UI, and CSS.</p></div>
+        </div>
+      </section>
+
+      <section class="more-tools">
+        <h2>Try More Tools</h2>
+        <div class="cards">
+          <a class="tool-mini" href="./html-css-minifier.html"><div class="icon"><i class="fas fa-stream"></i></div><div class="name">HTML/CSS Minifier</div><div class="meta">Reduce size</div></a>
+          <a class="tool-mini" href="./url-encoder-decoder.html"><div class="icon"><i class="fas fa-link"></i></div><div class="name">URL Encoder</div><div class="meta">Encode/Decode</div></a>
+        </div>
+      </section>
+    </section>
+
+    <div class="ad-banner" style="margin-top:30px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section"><div class="footer-logo"><i class="fas fa-tools"></i> ZetRocks</div><p>Free online tools for everyone. Fast, secure, and always free.</p></div>
+        <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="../../index.html">Home</a></li><li><a href="../../index.html#categories">Categories</a></li><li><a href="../../index.html#blog">Blog</a></li><li><a href="../../index.html#contact">Contact</a></li></ul></div>
+        <div class="footer-section"><h4>Legal</h4><ul><li><a href="../../legal/privacy-policy.html">Privacy Policy</a></li><li><a href="../../legal/terms.html">Terms of Service</a></li><li><a href="../../legal/about.html">About</a></li></ul></div>
+        <div class="footer-section"><h4>Follow Us</h4><div class="social-links"><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a><a href="#" title="YouTube"><i class="fab fa-youtube"></i></a><a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 ZetRocks – All rights reserved.</p><p class="disclaimer">All tools are free and work client-side. Ads help keep the platform free.</p></div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script>
+    const $=(s)=>document.querySelector(s);
+    const picker=$('#picker');
+    const hex=$('#hex');
+    const rgbEl=$('#rgb');
+    const hslEl=$('#hsl');
+    const any=$('#any');
+    const apply=$('#apply');
+    const preview=$('#preview');
+
+    function hexToRgb(hex){ hex=hex.replace('#',''); if(hex.length===3){ hex=[hex[0],hex[0],hex[1],hex[1],hex[2],hex[2]].join(''); } const num=parseInt(hex,16); const r=(num>>16)&255,g=(num>>8)&255,b=num&255; return [r,g,b]; }
+    function rgbToHex(r,g,b){ return '#'+[r,g,b].map(x=>x.toString(16).padStart(2,'0')).join(''); }
+    function rgbToHsl(r,g,b){ r/=255; g/=255; b/=255; const max=Math.max(r,g,b), min=Math.min(r,g,b); let h,s,l=(max+min)/2; if(max===min){ h=s=0; } else { const d=max-min; s=l>0.5? d/(2-max-min): d/(max+min); switch(max){ case r: h=(g-b)/d+(g<b?6:0); break; case g: h=(b-r)/d+2; break; case b: h=(r-g)/d+4; break; } h/=6; } return [Math.round(h*360), Math.round(s*100), Math.round(l*100)]; }
+    function hslToRgb(h,s,l){ h/=360; s/=100; l/=100; if(s===0){ const v=Math.round(l*255); return [v,v,v]; } const hue2rgb=(p,q,t)=>{ if(t<0)t+=1; if(t>1)t-=1; if(t<1/6)return p+(q-p)*6*t; if(t<1/2)return q; if(t<2/3)return p+(q-p)*(2/3-t)*6; return p; }; const q=l<0.5? l*(1+s): l+s-l*s; const p=2*l-q; const r=Math.round(hue2rgb(p,q,h+1/3)*255); const g=Math.round(hue2rgb(p,q,h)*255); const b=Math.round(hue2rgb(p,q,h-1/3)*255); return [r,g,b]; }
+
+    function setFromHex(v){ try{ const [r,g,b]=hexToRgb(v); const [hh,ss,ll]=rgbToHsl(r,g,b); rgbEl.textContent=`${r}, ${g}, ${b}`; hslEl.textContent=`${hh}, ${ss}%, ${ll}%`; preview.style.background=v; hex.value=v; picker.value=v; }catch(e){} }
+    function setFromRgbStr(str){ const m=str.match(/rgb[a]?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})/i); if(!m) return; const r=+m[1],g=+m[2],b=+m[3]; const h=rgbToHex(r,g,b); setFromHex(h); }
+    function setFromHslStr(str){ const m=str.match(/hsl[a]?\(\s*(\d{1,3})\s*,\s*(\d{1,3})%\s*,\s*(\d{1,3})%/i); if(!m) return; const [r,g,b]=hslToRgb(+m[1],+m[2],+m[3]); const h=rgbToHex(r,g,b); setFromHex(h); }
+
+    picker.addEventListener('input',()=>setFromHex(picker.value));
+    hex.addEventListener('input',()=>{ if(/^#?[0-9a-fA-F]{3,6}$/.test(hex.value.replace('#',''))) setFromHex(hex.value.startsWith('#')?hex.value:'#'+hex.value); });
+    apply.addEventListener('click',()=>{ const v=any.value.trim(); if(v.startsWith('#')||/^[0-9a-fA-F]{3,6}$/.test(v)) return setFromHex(v.startsWith('#')?v:'#'+v); if(v.toLowerCase().startsWith('rgb')) return setFromRgbStr(v); if(v.toLowerCase().startsWith('hsl')) return setFromHslStr(v); alert('Enter a valid HEX, RGB, or HSL value.'); });
+
+    document.querySelectorAll('[data-copy]').forEach(btn=>{
+      btn.addEventListener('click',async()=>{ const sel=btn.getAttribute('data-copy'); const el=document.querySelector(sel); const txt=el?.value||el?.textContent||''; await navigator.clipboard.writeText(txt); alert('Copied'); });
+    });
+  </script>
+</body>
+</html>

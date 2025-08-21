@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image to Text (OCR) – Extract Text from Images | ZetRocks</title>
+  <meta name="description" content="Extract text from images online using OCR powered by Tesseract.js. Free and private in your browser.">
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../faq.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="../../assets/icon.png" type="image/png">
+</head>
+<body class="tool-page accent-image">
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a class="logo" href="../../index.html" aria-label="ZetRocks Home"><img src="../../assets/logo.png" alt="ZetRocks" class="brand-logo"></a></div>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top:20px">
+    <div class="ad-banner" style="margin-top:10px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+
+    <section class="container" style="margin-top:20px">
+      <h1 class="section-title" style="margin-bottom:1rem">Image to Text (OCR)</h1>
+      <p style="text-align:center;color:var(--text-secondary);max-width:800px;margin:0 auto 1.5rem">Extract text from images using open-source OCR. Runs in the browser via WebAssembly.</p>
+
+      <div class="tool-3col">
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+
+        <div class="tool-card">
+          <label class="file-drop full-width-on-mobile">
+            <input id="o-input" type="file" accept="image/*" />
+            <div><strong>Click to upload</strong> or drag & drop an image</div>
+            <div class="hint">JPG, PNG, WEBP</div>
+          </label>
+
+          <div class="tool-actions" style="gap:.75rem;flex-wrap:wrap">
+            <label>Language:
+              <select id="o-lang">
+                <option value="eng">English</option>
+              </select>
+            </label>
+            <button class="btn btn-tool btn-cta" id="o-run">Extract Text</button>
+          </div>
+
+          <div id="o-status" style="color:var(--text-secondary);font-size:.9rem;margin-top:.5rem"></div>
+          <textarea id="o-output" rows="10" style="width:100%;margin-top:.75rem" placeholder="Extracted text will appear here..."></textarea>
+        </div>
+
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+      </div>
+
+      <section class="how-to" style="margin-top:2rem">
+        <h3>How to Use</h3>
+        <ol style="margin-left:1.25rem;color:var(--text-secondary)">
+          <li>Upload an image with text.</li>
+          <li>Choose the language and click Extract Text.</li>
+          <li>Copy the output, or edit it as needed.</li>
+        </ol>
+      </section>
+
+      <section class="seo-block">
+        <div class="seo-card">
+          <h3>Free OCR in Your Browser</h3>
+          <div class="seo-text">
+            <p>Turn screenshots and photos into editable text. No uploads—your files stay on your device.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <div class="ad-banner" style="margin-top:30px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo"><i class="fas fa-tools"></i> ZetRocks</div>
+          <p>Free online tools for everyone. Fast, secure, and always free.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../index.html">All Tools</a></li>
+            <li><a href="../../index.html#blog">Blog</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../../legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../../legal/terms.html">Terms of Service</a></li>
+            <li><a href="../../legal/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ZetRocks – All rights reserved.</p>
+        <p class="disclaimer">All tools are free and work client-side. Ads help keep the platform free.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="../../script.js"></script>
+  <script>
+    (function(){
+      const input = document.getElementById('o-input');
+      const run = document.getElementById('o-run');
+      const out = document.getElementById('o-output');
+      const status = document.getElementById('o-status');
+      const lang = document.getElementById('o-lang');
+      let file = null;
+
+      input.addEventListener('change', ()=>{ file = input.files && input.files[0]; });
+
+      run.addEventListener('click', async ()=>{
+        if(!file){ alert('Upload an image first.'); return; }
+        status.textContent = 'Initializing OCR…';
+        const url = URL.createObjectURL(file);
+        try{
+          const { data: { text } } = await Tesseract.recognize(url, lang.value, {
+            logger: m => { if(m.status) status.textContent = m.status + (m.progress?` ${(m.progress*100).toFixed(0)}%`: ''); }
+          });
+          out.value = text;
+          status.textContent = 'Done';
+        }catch(e){
+          console.error(e);
+          status.textContent = 'Failed to extract text.';
+        } finally {
+          URL.revokeObjectURL(url);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base64 Encoder/Decoder – Encode & Decode Online | ZetRocks</title>
+  <meta name="description" content="Encode or decode Base64 safely in your browser. Convert strings and files to Base64 and back instantly.">
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../faq.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="../../assets/icon.png" type="image/png">
+</head>
+<body class="tool-page accent-dev">
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a class="logo" href="../../index.html" aria-label="ZetRocks Home"><img src="../../assets/logo.png" alt="ZetRocks" class="brand-logo"></a></div>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top:20px">
+    <div class="ad-banner" style="margin-top:10px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+
+    <section class="container" style="margin-top:20px">
+      <h1 class="section-title" style="margin-bottom:1rem">Base64 Encoder/Decoder</h1>
+      <p style="text-align:center;color:var(--text-secondary);max-width:800px;margin:0 auto 1.5rem">Convert text to and from Base64. All processing happens locally in your browser.</p>
+
+      <div class="tool-3col">
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+
+        <div class="tool-card">
+          <textarea id="b64Input" rows="8" placeholder="Hello, world!" style="width:100%;padding:1rem;border-radius:8px;border:1px solid var(--border-color);background:transparent;color:var(--text-primary)"></textarea>
+          <div style="display:flex;gap:.5rem;margin-top:.75rem;flex-wrap:wrap">
+            <button class="btn btn-tool btn-cta" id="encodeBtn">Encode</button>
+            <button class="btn btn-secondary" id="decodeBtn">Decode</button>
+            <button class="btn" id="copyOut">Copy Output</button>
+          </div>
+          <pre id="b64Out" style="margin-top:1rem;white-space:pre-wrap;background:var(--bg-secondary);padding:1rem;border-radius:8px"></pre>
+
+          <div style="margin-top:1rem;border-top:1px dashed var(--border-color);padding-top:1rem">
+            <label for="fileInput" class="sr-only">Choose file</label>
+            <input type="file" id="fileInput" />
+            <button class="btn" id="fileToB64">File → Base64</button>
+            <button class="btn" id="b64ToFile">Base64 → File</button>
+          </div>
+        </div>
+
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+      </div>
+
+      <section class="how-to" style="margin-top:2rem">
+        <h3>How to Use</h3>
+        <ol style="margin-left:1.25rem;color:var(--text-secondary)">
+          <li>Type or paste text, then click Encode or Decode.</li>
+          <li>Use File → Base64 to convert any file to a Base64 string.</li>
+          <li>Use Base64 → File to download a decoded file from a Base64 string.</li>
+        </ol>
+      </section>
+
+      <section class="features" style="margin-top:2rem">
+        <h2>Key Features</h2>
+        <div class="feature-cards">
+          <div class="feature-card"><div class="feature-icon">🔐</div><h3>Client‑Side</h3><p>Data never leaves your device.</p></div>
+          <div class="feature-card"><div class="feature-icon">📄</div><h3>Text & Files</h3><p>Convert strings and files both ways.</p></div>
+          <div class="feature-card"><div class="feature-icon">⚡</div><h3>Fast</h3><p>Instant conversion, no limits.</p></div>
+        </div>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="faq-container">
+          <h2 id="faq-title" class="faq-title">Frequently Asked Questions</h2>
+          <div class="faq-list faq-accordion" data-accordion="single">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What is Base64?</button>
+              <div class="faq-answer-wrapper"><div class="faq-answer">A text encoding scheme to represent binary data using ASCII characters.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is my data uploaded?</button>
+              <div class="faq-answer-wrapper"><div class="faq-answer">No. Everything runs in your browser.</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seo-block">
+        <div class="seo-card">
+          <h3>Encode and Decode Base64 Online</h3>
+          <div class="seo-text">
+            <p>Use this free Base64 tool to encode strings and files, or decode Base64 back to readable text and downloadable files. Perfect for embedding images, handling data URIs, and testing APIs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="more-tools">
+        <h2>Try More Tools</h2>
+        <div class="cards">
+          <a class="tool-mini" href="./json-formatter.html"><div class="icon"><i class="fas fa-brackets-curly"></i></div><div class="name">JSON Formatter</div><div class="meta">Pretty‑print JSON</div></a>
+          <a class="tool-mini" href="../text-tools/word-counter.html"><div class="icon"><i class="fas fa-font"></i></div><div class="name">Word Counter</div><div class="meta">Live stats</div></a>
+        </div>
+      </section>
+    </section>
+
+    <div class="ad-banner" style="margin-top:30px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section"><div class="footer-logo"><i class="fas fa-tools"></i> ZetRocks</div><p>Free online tools for everyone. Fast, secure, and always free.</p></div>
+        <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="../../index.html">Home</a></li><li><a href="../../index.html#categories">Categories</a></li><li><a href="../../index.html#blog">Blog</a></li><li><a href="../../index.html#contact">Contact</a></li></ul></div>
+        <div class="footer-section"><h4>Legal</h4><ul><li><a href="../../legal/privacy-policy.html">Privacy Policy</a></li><li><a href="../../legal/terms.html">Terms of Service</a></li><li><a href="../../legal/about.html">About</a></li></ul></div>
+        <div class="footer-section"><h4>Follow Us</h4><div class="social-links"><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a><a href="#" title="YouTube"><i class="fab fa-youtube"></i></a><a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 ZetRocks – All rights reserved.</p><p class="disclaimer">All tools are free and work client-side. Ads help keep the platform free.</p></div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script>
+    const $ = (s)=>document.querySelector(s);
+    const input = $('#b64Input');
+    const out = $('#b64Out');
+    const enc = $('#encodeBtn');
+    const dec = $('#decodeBtn');
+    const copy = $('#copyOut');
+    const fileInput = $('#fileInput');
+    const fileToB64Btn = $('#fileToB64');
+    const b64ToFileBtn = $('#b64ToFile');
+
+    enc?.addEventListener('click',()=>{
+      try { out.textContent = btoa(unescape(encodeURIComponent(input.value))); }
+      catch(e){ out.textContent = 'Encode error: '+e.message; }
+    });
+    dec?.addEventListener('click',()=>{
+      try { out.textContent = decodeURIComponent(escape(atob(input.value.trim()))); }
+      catch(e){ out.textContent = 'Decode error: '+e.message; }
+    });
+    copy?.addEventListener('click', async ()=>{ await navigator.clipboard.writeText(out.textContent||''); alert('Copied'); });
+
+    fileToB64Btn?.addEventListener('click',()=>{
+      const f = fileInput.files?.[0]; if(!f){ alert('Choose a file first'); return; }
+      const reader = new FileReader();
+      reader.onload = ()=>{ out.textContent = (reader.result||'').toString(); };
+      reader.readAsDataURL(f);
+    });
+
+    b64ToFileBtn?.addEventListener('click',()=>{
+      try{
+        const data = input.value.trim();
+        const a = document.createElement('a');
+        a.href = data.startsWith('data:') ? data : 'data:application/octet-stream;base64,'+data;
+        a.download = 'decoded.bin';
+        document.body.appendChild(a); a.click(); a.remove();
+      }catch(e){ alert('Invalid Base64'); }
+    });
+  </script>
+</body>
+</html>

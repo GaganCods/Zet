@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Live Preview – Edit HTML, CSS, JS with Instant Preview | ZetRocks</title>
+  <meta name="description" content="Write and preview HTML, CSS, and JavaScript in real time. Instant live preview, auto-run, and one-click copy. All in your browser.">
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../tools.css" />
+  <link rel="stylesheet" href="../../faq.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="../../assets/icon.png" type="image/png">
+  <style>
+    .code-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .pane { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; display:flex; flex-direction:column; }
+    .pane header { display:flex; align-items:center; justify-content:space-between; padding:.6rem .9rem; background: var(--bg-tertiary, rgba(0,0,0,0.06)); border-bottom:1px solid var(--border-color); font-weight:600; }
+    .pane header .actions { display:flex; gap:.5rem; }
+    .pane textarea { width:100%; height:220px; padding:.9rem; background: transparent; color: var(--text-primary); border:0; resize: vertical; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size:.95rem; }
+    .preview { height: 480px; width: 100%; border: 0; background: var(--bg-primary); }
+    .tool-actions { display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.75rem; }
+    @media (max-width: 980px) { .code-grid { grid-template-columns: 1fr; } .preview { height: 400px; } }
+  </style>
+</head>
+<body class="tool-page accent-dev">
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a class="logo" href="../../index.html" aria-label="ZetRocks Home"><img src="../../assets/logo.png" alt="ZetRocks" class="brand-logo"></a></div>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top:20px">
+    <div class="ad-banner" style="margin-top:10px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+
+    <section class="container" style="margin-top:20px">
+      <h1 class="section-title" style="margin-bottom:1rem">HTML Live Preview</h1>
+      <p style="text-align:center;color:var(--text-secondary);max-width:800px;margin:0 auto 1.5rem">Edit HTML, CSS, and JavaScript with an instant live preview. Great for prototyping, testing snippets, and sharing examples—fully client‑side.</p>
+
+      <div class="tool-3col">
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+
+        <div class="tool-card">
+          <div class="code-grid">
+            <div class="pane">
+              <header>
+                <span><i class="fas fa-code"></i> HTML</span>
+                <div class="actions">
+                  <button class="btn btn-xxs btn-secondary" id="copyHtml" title="Copy HTML">Copy</button>
+                </div>
+              </header>
+              <textarea id="htmlInput" placeholder="<h1>Hello, world!</h1>\n<p>Start editing...</p>"><h1>Hello, world!</h1>
+<p>Start editing...</p>
+</textarea>
+            </div>
+            <div class="pane">
+              <header>
+                <span><i class="fas fa-paint-brush"></i> CSS</span>
+                <div class="actions">
+                  <button class="btn btn-xxs btn-secondary" id="copyCss" title="Copy CSS">Copy</button>
+                </div>
+              </header>
+              <textarea id="cssInput" placeholder="body { font-family: Inter, system-ui, sans-serif; }\nh1 { color: #4f46e5; }">body { font-family: Inter, system-ui, sans-serif; }
+h1 { color: #4f46e5; }
+</textarea>
+            </div>
+            <div class="pane">
+              <header>
+                <span><i class="fas fa-bolt"></i> JavaScript</span>
+                <div class="actions">
+                  <button class="btn btn-xxs btn-secondary" id="copyJs" title="Copy JS">Copy</button>
+                </div>
+              </header>
+              <textarea id="jsInput" placeholder="console.log('Ready!')">console.log('Ready!')
+</textarea>
+            </div>
+            <div class="pane">
+              <header>
+                <span><i class="fas fa-eye"></i> Live Preview</span>
+                <div class="actions">
+                  <button class="btn btn-xxs btn-secondary" id="openNew" title="Open in new tab">Open</button>
+                </div>
+              </header>
+              <iframe id="preview" class="preview" sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"></iframe>
+            </div>
+          </div>
+
+          <div class="tool-actions">
+            <button class="btn btn-tool btn-cta" id="runBtn"><i class="fas fa-play"></i> Run</button>
+            <label style="display:flex;align-items:center;gap:.4rem;cursor:pointer">
+              <input type="checkbox" id="autoRun" checked> Auto‑run on type
+            </label>
+            <button class="btn btn-secondary" id="copyAll">Copy All</button>
+            <button class="btn btn-secondary" id="downloadZip">Download HTML</button>
+          </div>
+        </div>
+
+        <aside class="sidebar-slot">
+          <script type="text/javascript"> atOptions = { key: '82197005568e402341bb98faf64a8050', format: 'iframe', height: 600, width: 160, params: {} };</script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/82197005568e402341bb98faf64a8050/invoke.js"></script>
+        </aside>
+      </div>
+
+      <section class="how-to" style="margin-top:2rem">
+        <h3>How to Use</h3>
+        <ol style="margin-left:1.25rem;color:var(--text-secondary)">
+          <li>Type HTML, CSS, and JS in their respective editors.</li>
+          <li>Keep <strong>Auto‑run</strong> enabled for instant preview or click <strong>Run</strong>.</li>
+          <li>Open the result in a new tab or copy the code with one click.</li>
+        </ol>
+      </section>
+
+      <section class="features" style="margin-top:2rem">
+        <h2>Key Features</h2>
+        <div class="feature-cards">
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">⚡</div>
+            <h3>Instant Preview</h3>
+            <p>Live rendering of HTML, CSS, and JS for fast iteration.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🧩</div>
+            <h3>Separate Editors</h3>
+            <p>Dedicated panels keep code organized and easy to edit.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📋</div>
+            <h3>Copy & Export</h3>
+            <p>Copy individual panes or export the full HTML in one click.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🔒</div>
+            <h3>Private by Design</h3>
+            <p>Everything runs in your browser—no servers involved.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="faq-container">
+          <h2 id="faq-title" class="faq-title">Frequently Asked Questions</h2>
+          <p class="faq-subtitle">Quick answers about using the live preview safely in your browser.</p>
+
+          <div class="faq-list faq-accordion" data-accordion="single">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+                Does it send my code to a server?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer-wrapper" id="faq-a1" role="region" aria-labelledby="faq-q1">
+                <div class="faq-answer">No. The preview is generated entirely in your browser. Your code never leaves your device.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+                Can I open the result in a new tab?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer-wrapper" id="faq-a2" role="region" aria-labelledby="faq-q2">
+                <div class="faq-answer">Yes. Click <strong>Open</strong> to launch the current preview in a new browser tab.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+                Does it support external libraries?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer-wrapper" id="faq-a3" role="region" aria-labelledby="faq-q3">
+                <div class="faq-answer">You can paste CDN links inside the HTML pane's <code>&lt;head&gt;</code> section to load libraries in the preview.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+                Is the preview sandboxed?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq-answer-wrapper" id="faq-a4" role="region" aria-labelledby="faq-q4">
+                <div class="faq-answer">Yes. The preview runs in a sandboxed iframe with limited permissions to enhance safety.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-tool" style="margin-top:1.5rem;">
+        <h2>Build and Test Front‑End Snippets</h2>
+        <div class="about-soft">
+          <p>This live editor helps you prototype UI components, test CSS rules, and experiment with JavaScript quickly. With auto‑run and instant preview, you can iterate faster without setting up a local environment. Perfect for learning, demos, and sharing code snippets.</p>
+        </div>
+      </section>
+
+      <section class="seo-block">
+        <div class="seo-card">
+          <h3>Live HTML, CSS, and JavaScript Preview</h3>
+          <div class="seo-text">
+            <p>Use this free HTML live preview tool to write code and see results instantly. Edit HTML, CSS, and JavaScript in separate editors with auto‑run and export options. Your code runs locally in a sandboxed iframe, keeping your work private and secure.</p>
+            <p>Whether you're learning web development or testing a design concept, this lightweight tool helps you iterate rapidly. Copy code with one click or open the result in a new tab to share or save.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="more-tools">
+        <h2>Try More Tools</h2>
+        <div class="cards">
+          <a class="tool-mini" href="./json-formatter.html">
+            <div class="icon"><i class="fas fa-brackets-curly"></i></div>
+            <div class="name">JSON Formatter</div>
+            <div class="meta">Format and validate JSON</div>
+          </a>
+          <a class="tool-mini" href="./base64-encoder-decoder.html">
+            <div class="icon"><i class="fas fa-lock"></i></div>
+            <div class="name">Base64 Encoder/Decoder</div>
+            <div class="meta">Encode or decode Base64</div>
+          </a>
+          <a class="tool-mini" href="./color-picker.html">
+            <div class="icon"><i class="fas fa-eye-dropper"></i></div>
+            <div class="name">Color Picker</div>
+            <div class="meta">Convert HEX, RGB, HSL</div>
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <div class="ad-banner" style="margin-top:30px">
+      <script type="text/javascript"> atOptions = { key: '40880397bd99d2eb34a5e05403d08e1c', format: 'iframe', height: 90, width: 728, params: {} };</script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/40880397bd99d2eb34a5e05403d08e1c/invoke.js"></script>
+    </div>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo"><i class="fas fa-tools"></i> ZetRocks</div>
+          <p>Free online tools for everyone. Fast, secure, and always free.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.html#categories">Categories</a></li>
+            <li><a href="../../index.html#blog">Blog</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../../legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../../legal/terms.html">Terms of Service</a></li>
+            <li><a href="../../legal/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ZetRocks – All rights reserved.</p>
+        <p class="disclaimer">All tools are free and work client-side. Ads help keep the platform free.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+  <script>
+    const htmlInput = document.getElementById('htmlInput');
+    const cssInput = document.getElementById('cssInput');
+    const jsInput = document.getElementById('jsInput');
+    const preview = document.getElementById('preview');
+    const runBtn = document.getElementById('runBtn');
+    const autoRun = document.getElementById('autoRun');
+    const copyHtml = document.getElementById('copyHtml');
+    const copyCss = document.getElementById('copyCss');
+    const copyJs = document.getElementById('copyJs');
+    const copyAll = document.getElementById('copyAll');
+    const openNew = document.getElementById('openNew');
+    const downloadZip = document.getElementById('downloadZip');
+    let currentBlobUrl = null;
+
+    function buildDocument() {
+      const html = htmlInput.value || '';
+      const css = `<style>\n${cssInput.value || ''}\n</style>`;
+      const js = `<script>\n${jsInput.value || ''}\n<\/script>`;
+      const doc = `<!doctype html><html><head><meta charset="utf-8">${css}</head><body>${html}${js}</body></html>`;
+      return doc;
+    }
+
+    function render() {
+      const doc = buildDocument();
+      try {
+        // Prefer srcdoc when available
+        if ('srcdoc' in preview) {
+          preview.srcdoc = doc;
+          // Clear any previous blob URL if we switch back
+          if (currentBlobUrl) { URL.revokeObjectURL(currentBlobUrl); currentBlobUrl = null; }
+        } else {
+          // Fallback for environments that don't support srcdoc
+          if (currentBlobUrl) { URL.revokeObjectURL(currentBlobUrl); currentBlobUrl = null; }
+          const blob = new Blob([doc], { type: 'text/html' });
+          currentBlobUrl = URL.createObjectURL(blob);
+          preview.src = currentBlobUrl;
+        }
+      } catch (e) {
+        // Final fallback to Blob URL if srcdoc assignment fails for any reason
+        if (currentBlobUrl) { URL.revokeObjectURL(currentBlobUrl); currentBlobUrl = null; }
+        const blob = new Blob([doc], { type: 'text/html' });
+        currentBlobUrl = URL.createObjectURL(blob);
+        preview.src = currentBlobUrl;
+      }
+    }
+
+    function openInNewTab() {
+      const w = window.open('', '_blank');
+      if (w) {
+        w.document.open();
+        w.document.write(buildDocument());
+        w.document.close();
+      } else {
+        alert('Popup blocked. Please allow popups for this site.');
+      }
+    }
+
+    function downloadHtml() {
+      const blob = new Blob([buildDocument()], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function debounce(fn, ms) {
+      let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn.apply(this, args), ms); };
+    }
+
+    const debouncedRender = debounce(() => { if (autoRun.checked) render(); }, 250);
+
+    htmlInput.addEventListener('input', debouncedRender);
+    cssInput.addEventListener('input', debouncedRender);
+    jsInput.addEventListener('input', debouncedRender);
+
+    runBtn.addEventListener('click', render);
+    openNew.addEventListener('click', openInNewTab);
+    downloadZip.addEventListener('click', downloadHtml);
+
+    copyHtml.addEventListener('click', async () => { await navigator.clipboard.writeText(htmlInput.value); alert('HTML copied'); });
+    copyCss.addEventListener('click', async () => { await navigator.clipboard.writeText(cssInput.value); alert('CSS copied'); });
+    copyJs.addEventListener('click', async () => { await navigator.clipboard.writeText(jsInput.value); alert('JS copied'); });
+    copyAll.addEventListener('click', async () => {
+      const combined = `<!doctype html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <style>\n${cssInput.value}\n  </style>\n</head>\n<body>\n${htmlInput.value}\n  <script>\n${jsInput.value}\n  <\/script>\n</body>\n</html>`;
+      await navigator.clipboard.writeText(combined);
+      alert('Full HTML copied');
+    });
+
+    // Initial render
+    render();
+  </script>
+</body>
+</html>

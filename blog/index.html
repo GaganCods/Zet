@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog – Latest Articles and Categories | ZetRocks</title>
+  <meta name="description" content="Read the latest articles from ZetRocks. Explore tips, guides, and updates across categories like Development, Design, Productivity, and Updates." />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./blog.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="../assets/icon.png" type="image/png">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a class="logo" href="../index.html" aria-label="ZetRocks Home">
+          <img src="../assets/logo.png" alt="ZetRocks" class="brand-logo">
+        </a>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#categories">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <main style="padding-top:90px">
+    <!-- Hero / Intro -->
+    <section class="container" style="text-align:center; margin-top: 20px;">
+      <h1 class="section-title" style="margin-bottom:.5rem">ZetRocks Blog</h1>
+      <p style="color:var(--text-secondary); max-width:820px; margin:0 auto 1.25rem">Latest tutorials, product updates, and best practices for faster workflows across images, PDFs, text, and developer tools.</p>
+    </section>
+
+    <!-- Latest Posts -->
+    <section class="container" aria-labelledby="latest-title">
+      <h2 id="latest-title" class="section-title" style="margin-bottom:.75rem">Latest Posts</h2>
+      <div class="blog-cards">
+        <!-- New: Image Optimization Guide -->
+        <article class="blog-card">
+          <a href="./image-tools/image-optimization-guide.html" class="thumb" aria-label="Image Optimization Guide">
+            <i class="fas fa-image"></i>
+          </a>
+          <div class="body">
+            <a href="#cat-image" class="badge-cat">Image Tools</a>
+            <a href="./image-tools/image-optimization-guide.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Image Optimization Guide</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Master fast images without losing visual quality. Formats, compression, and delivery tips.</p>
+          </div>
+        </article>
+        <!-- Card 1 -->
+        <article class="blog-card">
+          <a href="./image-tools/optimize-images-web.html" class="thumb" aria-label="Optimizing Client-side Image Compression">
+            <i class="fas fa-image"></i>
+          </a>
+          <div class="body">
+            <a href="#cat-image" class="badge-cat">Image Tools</a>
+            <a href="./image-tools/optimize-images-web.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Optimizing Client-side Image Compression</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">A practical guide to quality, speed, and UX trade-offs when compressing images in the browser.</p>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="blog-card">
+          <a href="./file-tools/compress-pdf-best-practices.html" class="thumb" aria-label="Smaller PDFs, Faster Workflows">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <div class="body">
+            <a href="#cat-file" class="badge-cat">File Tools</a>
+            <a href="./file-tools/compress-pdf-best-practices.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Smaller PDFs, Faster Workflows</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Tips to reduce document size for email, portals, and archives without hurting readability.</p>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="blog-card">
+          <a href="./developer-tools/format-validate-json.html" class="thumb" aria-label="Format and Validate JSON">
+            <i class="fas fa-code"></i>
+          </a>
+          <div class="body">
+            <a href="#cat-developer" class="badge-cat">Developer Tools</a>
+            <a href="./developer-tools/format-validate-json.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Format and Validate JSON</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Readable JSON accelerates debugging and collaboration. Learn quick patterns.</p>
+          </div>
+        </article>
+        <!-- Card 4 -->
+        <article class="blog-card">
+          <a href="./text-tools/write-better-meta-descriptions.html" class="thumb" aria-label="Write Better Meta Descriptions">
+            <i class="fas fa-font"></i>
+          </a>
+          <div class="body">
+            <a href="#cat-text" class="badge-cat">Text Tools</a>
+            <a href="./text-tools/write-better-meta-descriptions.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Write Better Meta Descriptions</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Keep them clear, compelling, and within character limits that match SERP display.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Categories Navigation -->
+    <section class="container" aria-labelledby="cats-title" style="margin-top:1.75rem;">
+      <h2 id="cats-title" class="section-title" style="margin-bottom:.75rem">Browse by Category</h2>
+      <div class="category-chips" id="category-chips">
+        <a href="#cat-file" class="btn btn-secondary">File Tools</a>
+        <a href="#cat-image" class="btn btn-secondary">Image Tools</a>
+        <a href="#cat-text" class="btn btn-secondary">Text Tools</a>
+        <a href="#cat-developer" class="btn btn-secondary">Developer Tools</a>
+      </div>
+    </section>
+
+    <!-- Category: File Tools -->
+    <section id="cat-file" class="container section" aria-labelledby="file-title">
+      <h2 id="file-title">File Tools</h2>
+      <div class="blog-cards">
+        <article class="blog-card">
+          <a href="./file-tools/compress-pdf-best-practices.html" class="thumb" aria-label="Smaller PDFs, Faster Workflows"><i class="fas fa-file-pdf"></i></a>
+          <div class="body">
+            <a href="#cat-file" class="badge-cat">File Tools</a>
+            <a href="./file-tools/compress-pdf-best-practices.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Smaller PDFs, Faster Workflows</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Reduce size without losing clarity. Practical compress strategies.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a href="./file-tools/merge-pdf-guide.html" class="thumb" aria-label="Merge PDF Guide"><i class="fas fa-file-pdf"></i></a>
+          <div class="body">
+            <a href="#cat-file" class="badge-cat">File Tools</a>
+            <a href="./file-tools/merge-pdf-guide.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Merge PDF Guide</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Cleanly combine PDFs and keep things searchable and organized.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Category: Image Tools -->
+    <section id="cat-image" class="container section" aria-labelledby="image-title">
+      <h2 id="image-title">Image Tools</h2>
+      <div class="blog-cards">
+        <article class="blog-card">
+          <a href="./image-tools/image-optimization-guide.html" class="thumb" aria-label="Image Optimization Guide"><i class="fas fa-image"></i></a>
+          <div class="body">
+            <a href="#cat-image" class="badge-cat">Image Tools</a>
+            <a href="./image-tools/image-optimization-guide.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Image Optimization Guide</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Speed up pages without sacrificing visual appeal.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a href="./image-tools/optimize-images-web.html" class="thumb" aria-label="Optimizing Client-side Image Compression"><i class="fas fa-image"></i></a>
+          <div class="body">
+            <a href="#cat-image" class="badge-cat">Image Tools</a>
+            <a href="./image-tools/optimize-images-web.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Optimizing Client-side Image Compression</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Quality vs. size trade-offs and formats that work best on the web.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a href="./image-tools/choose-image-format.html" class="thumb" aria-label="Choose the Right Image Format"><i class="fas fa-image"></i></a>
+          <div class="body">
+            <a href="#cat-image" class="badge-cat">Image Tools</a>
+            <a href="./image-tools/choose-image-format.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Choose the Right Image Format</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">PNG, JPG, WebP, AVIF: when to use which and why.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Category: Text Tools -->
+    <section id="cat-text" class="container section" aria-labelledby="text-title">
+      <h2 id="text-title">Text Tools</h2>
+      <div class="blog-cards">
+        <article class="blog-card">
+          <a href="./text-tools/counting-text-essentials.html" class="thumb" aria-label="Counting Text Essentials"><i class="fas fa-font"></i></a>
+          <div class="body">
+            <a href="#cat-text" class="badge-cat">Text Tools</a>
+            <a href="./text-tools/counting-text-essentials.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Counting Text Essentials</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Word and character counts the right way for web publishing.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a href="./text-tools/write-better-meta-descriptions.html" class="thumb" aria-label="Write Better Meta Descriptions"><i class="fas fa-font"></i></a>
+          <div class="body">
+            <a href="#cat-text" class="badge-cat">Text Tools</a>
+            <a href="./text-tools/write-better-meta-descriptions.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Write Better Meta Descriptions</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Clear, compelling snippets that increase CTR and relevance.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Category: Developer Tools -->
+    <section id="cat-developer" class="container section" aria-labelledby="developer-title">
+      <h2 id="developer-title">Developer Tools</h2>
+      <div class="blog-cards">
+        <article class="blog-card">
+          <a href="./developer-tools/format-validate-json.html" class="thumb" aria-label="Format and Validate JSON"><i class="fas fa-code"></i></a>
+          <div class="body">
+            <a href="#cat-developer" class="badge-cat">Developer Tools</a>
+            <a href="./developer-tools/format-validate-json.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Format and Validate JSON</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Readable JSON patterns and validation basics.</p>
+          </div>
+        </article>
+        <article class="blog-card">
+          <a href="./developer-tools/base64-encoding-basics.html" class="thumb" aria-label="Base64 Encoding Basics"><i class="fas fa-code"></i></a>
+          <div class="body">
+            <a href="#cat-developer" class="badge-cat">Developer Tools</a>
+            <a href="./developer-tools/base64-encoding-basics.html" style="text-decoration:none"><h3 style="margin:0; font-size:1.05rem; color:var(--text-primary);">Base64 Encoding Basics</h3></a>
+            <p style="margin:0; color:var(--text-secondary);">Understand encoding trade-offs and safe handling tips.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo"><i class="fas fa-tools"></i> ZetRocks</div>
+          <p>Free online tools for everyone. Fast, secure, and always free.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../tools/index.html">All Tools</a></li>
+            <li><a href="./index.html">Blog</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="../legal/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../legal/terms.html">Terms of Service</a></li>
+            <li><a href="../legal/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ZetRocks – All rights reserved.</p>
+        <p class="disclaimer">All tools are free and work client-side. Ads help keep the platform free.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
