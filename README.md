@@ -40,7 +40,7 @@ This is a static site. You can view it by opening `index.html` directly in a bro
 
 - Host on any static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages, or your own server).
 - Ensure `sitemap.xml` and `robots.txt` are served at the site root.
-- Set canonical base URL to match production (e.g., `https://zetrocks.com`).
+- Set canonical base URL to match production (e.g., `https://zetrocks.vercel.app`).
 
 ## SEO and Content Strategy
 
@@ -59,7 +59,7 @@ Example `robots.txt`:
 ```
 User-agent: *
 Allow: /
-Sitemap: https://zetrocks.com/sitemap.xml
+Sitemap: https://zetrocks.vercel.app/sitemap.xml
 ```
 
 ## Contributing
