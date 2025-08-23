@@ -52,9 +52,17 @@
         <div class="tool-card">
           <label for="ytUrl" style="display:block;margin-bottom:.5rem">YouTube URL</label>
           <input id="ytUrl" type="url" placeholder="https://www.youtube.com/watch?v=..." style="width:100%;padding:.75rem;border-radius:8px;border:1px solid var(--border-color);background:transparent;color:var(--text-primary)" />
-          <div style="display:flex;gap:.75rem;margin-top:.75rem;flex-wrap:wrap">
-            <button class="btn btn-tool btn-cta" id="fetchBtn">Fetch Thumbnail</button>
-            <a class="btn btn-secondary" id="dlThumb" style="display:none" download>Download</a>
+          <div style="display:flex;gap:.75rem;margin-top:.75rem;flex-wrap:wrap;align-items:center">
+            <label for="ytQuality" style="margin-right:.25rem;color:var(--text-secondary)">Quality:</label>
+            <select id="ytQuality" style="padding:.55rem .75rem;border-radius:8px;border:1px solid var(--border-color);background:transparent;color:var(--text-primary)">
+              <option value="maxresdefault">Max Resolution</option>
+              <option value="hqdefault">High</option>
+              <option value="mqdefault">Medium</option>
+              <option value="sddefault">Standard</option>
+              <option value="default">Default</option>
+            </select>
+            <button class="btn btn-tool btn-cta" id="fetchBtn">Get Thumbnail</button>
+            <a class="btn btn-secondary" id="dlThumb" style="display:none" target="_blank" rel="noopener">Open in New Tab</a>
           </div>
           <div id="thumbPreview" style="margin-top:1rem"></div>
         </div>
@@ -239,8 +247,58 @@
     const fetchBtn = document.getElementById('fetchBtn');
     const dl = document.getElementById('dlThumb');
     const preview = document.getElementById('thumbPreview');
-    function getId(url){ const u = new URL(url); const id = u.searchParams.get('v'); if(id) return id; const m = u.pathname.match(/\/embed\/|\/shorts\//) ? u.pathname.split('/').pop() : null; return m || ''; }
-    fetchBtn?.addEventListener('click',()=>{ try{ const id = getId(yt.value.trim()); if(!id){ alert('Enter a valid YouTube URL'); return; } const src = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`; preview.innerHTML = `<img src="${src}" alt="Thumbnail" style="max-width:100%;border-radius:8px"/>`; dl.href = src; dl.style.display='inline-flex'; }catch(e){ alert('Invalid URL'); } });
+    const qualitySel = document.getElementById('ytQuality');
+
+    function getId(url){
+      if(!url) return '';
+      // Normalize missing protocol
+      const candidate = url.startsWith('http') ? url : `https://${url}`;
+      try{
+        const u = new URL(candidate);
+        // 1) watch?v=ID
+        const v = u.searchParams.get('v');
+        if(v && v.length === 11) return v;
+        // 2) youtu.be/ID or /embed/ID or /shorts/ID or /live/ID
+        const parts = u.pathname.split('/').filter(Boolean);
+        const last = parts[parts.length - 1] || '';
+        if(last.length === 11) return last;
+      }catch(_){ /* fall back to regex */ }
+      // Regex fallback for various patterns
+      const m = url.match(/(?:youtube\.com\/(?:.*[?&]v=|(?:embed|shorts|live)\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+      return m ? m[1] : '';
+    }
+
+    function renderThumbnail(src, id){
+      preview.innerHTML = `<img src="${src}" alt="YouTube Thumbnail for ${id}" style="max-width:100%;border-radius:8px;display:block"/>`;
+      dl.href = src;
+      dl.style.display = 'inline-flex';
+    }
+
+    function clearPreview(){
+      preview.innerHTML = '';
+      dl.removeAttribute('href');
+      dl.style.display = 'none';
+    }
+
+    function handleFetch(){
+      clearPreview();
+      const val = yt.value.trim();
+      const id = getId(val);
+      if(!id){ alert('Enter a valid YouTube URL'); return; }
+      const q = qualitySel?.value || 'maxresdefault';
+      const src = `https://img.youtube.com/vi/${id}/${q}.jpg`;
+      renderThumbnail(src, id);
+    }
+
+    fetchBtn?.addEventListener('click', handleFetch);
+    yt?.addEventListener('keydown', (e)=>{ if(e.key === 'Enter'){ e.preventDefault(); handleFetch(); } });
+    yt?.addEventListener('input', ()=>{ if(!yt.value.trim()) clearPreview(); });
+    // Always open image in a new tab when clicking the Download/Open button
+    dl?.addEventListener('click', (e)=>{
+      if(!dl.href) return;
+      e.preventDefault();
+      window.open(dl.href, '_blank', 'noopener');
+    });
   </script>
 </body>
 </html>
