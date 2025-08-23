@@ -1,0 +1,12 @@
+# Use custom 404 error page
+ErrorDocument 404 /404.html
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# If the requested resource is not a file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Serve the 404 page without redirecting (URL stays the same)
+RewriteRule ^(.*)$ /404.html [L,QSA]

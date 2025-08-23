@@ -1,7 +1,3 @@
-
-<script type='text/javascript' src='//pl27484094.profitableratecpm.com/05/92/e0/0592e091866d1399be0cd1a2882fc58b.js'></script>
-
-
 // DOM Elements
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
